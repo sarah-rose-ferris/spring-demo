@@ -1,0 +1,51 @@
+plugins {
+	id 'java'
+	id 'io.spring.dependency-management' version "1.0.11.RELEASE"
+	id 'org.springframework.boot' version '2.5.0'
+	id 'pl.allegro.tech.build.axion-release' version '1.13.2'
+	id 'com.palantir.docker' version '0.30.0'
+	id "com.palantir.docker-run" version "0.31.0-rc1"
+}
+
+version = scmVersion.version
+sourceCompatibility = 8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.5.6'
+	implementation 'org.springframework.boot:spring-boot-starter-validation:2.5.6'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator:2.5.6'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.6'
+	implementation 'org.springframework.boot:spring-boot-devtools:2.5.6'
+	implementation group: 'com.h2database', name: 'h2', version: '1.4.200'
+	implementation group: 'io.cucumber', name: 'cucumber-spring', version: '6.8.1'
+	implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.8.1'
+	testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.8.1'
+
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.6'
+	testImplementation group: 'junit', name: 'junit', version: '4.11'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+String imageName = "jacobwestwellnetcompany/concept:$version"
+docker {
+	name imageName
+	files "build/libs/${bootJar.archiveFileName.get()}"
+	buildArgs([JAR_FILE: bootJar.archiveFileName.get()])
+}
+
+dockerRun {
+	name "concept"
+	image imageName
+	ports '8081:8081'
+	clean true
+}
