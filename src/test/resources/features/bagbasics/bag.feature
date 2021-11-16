@@ -1,10 +1,12 @@
 Feature: Bag functionalities
 
+  @TestCaseKey=TS-T1
   Scenario: Putting one thing in the bag
     Given the bag is empty
     When I put 1 potato in the bag
     Then the bag should contain only 1 potato
 
+  @TestCaseKey=TS-T2
   Scenario: Putting few things in the bag
     Given the bag is empty
     When I put 1 potato in the bag

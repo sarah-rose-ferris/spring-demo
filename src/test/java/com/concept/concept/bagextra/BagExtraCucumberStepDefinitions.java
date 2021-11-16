@@ -12,13 +12,13 @@ public class BagExtraCucumberStepDefinitions {
     @Autowired
     private BagHttpClient bagHttpClient;
 
-    @Given("^the bag is not empty$")
+    @Given("the bag is not empty")
     public void the_bag_is_not_empty() {
         bagHttpClient.put("something");
         assertThat(bagHttpClient.getContents().isEmpty()).isFalse();
     }
 
-    @When("^I empty the bag$")
+    @When("I empty the bag")
     public void empty_the_bag() {
         bagHttpClient.clean();
     }

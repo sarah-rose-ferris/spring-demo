@@ -5,8 +5,10 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features/bagbasics",
-        plugin = {"junit:target/cucumber/result.xml", "json:target/cucumber/integration.json"},
-        extraGlue = "com.concept.concept.bagcommons")
+@CucumberOptions(features = "src/test/resources/features/bagbasics"
+        ,extraGlue = "com.concept.concept.bagcommons"
+        ,plugin = {"pretty","html:target/html", "json:target/cucumber.json"})
 public class BagCucumberIntegrationTest {
 }
+
+//classpath:features"
