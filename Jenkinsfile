@@ -36,7 +36,7 @@ pipeline {
       echo 'Post build actions'
       publishTestResults serverAddress: 'https://testdashboardwork.atlassian.net',
         projectKey: 'TS',
-        filePath: 'target/cucumber-reports/*.json',
+        filePath: '**/target/**/*.json',
         format: 'Cucumber',
         autoCreateTestCases: true
     }
