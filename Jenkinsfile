@@ -38,7 +38,7 @@ pipeline {
         projectKey: 'TS',
         filePath: 'target/cucumber-reports/*.json',
         format: 'Cucumber',
-        autoCreateTestCases: false
+        autoCreateTestCases: true
     }
   }
 }
