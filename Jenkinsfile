@@ -31,4 +31,13 @@ pipeline {
             }
         }
     }
+    post {
+            always {
+                publishTestResults serverAddress: 'https://testdashboardwork.atlassian.net/jira',
+                        projectKey: 'TS',
+                        filePath:'target/cucumber-reports/*.json',
+                        format: 'Cucumber',
+                        autoCreateTestCases: true
+            }
+        }
 }

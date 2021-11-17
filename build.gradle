@@ -36,68 +36,7 @@ test {
 	useJUnitPlatform()
 }
 
-//configurations {
-//	cucumberRuntime {
-//		extendsFrom testImplementation
-//	}
-//}
-//
-//task cucumber() {
-//	dependsOn assemble, testClasses
-//	doLast {
-//		javaexec {
-//			main = "io.cucumber.core.cli.Main"
-//			classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-//
-//
-//			args = ['--plugin', 'pretty',
-//
-//					'--plugin', 'json:target/results.json',
-//
-//					'--glue','com..com.concept',
-//
-//					'--extraGlue', 'com.concept.concept.bagcommons',
-//
-//					'src/test/resources','src/main/java',
-//
-//					'--tags', '@Api'
-//			]
-//
-//		}
-//
-//	}
-//}
-//
-////task cucumberCli() {
-////	dependsOn assemble, testClasses
-////	doLast {
-////		javaexec {
-////			main = "io.cucumber.core.cli.Main"
-////			classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-////			args = [
-////					'--plugin', 'pretty',
-////					'--plugin', 'json:target/cucumber-report.json',
-////					'--glue', 'com.concept.concept',
-////					'src/test/resources']
-////		}
-////	}
-////}
-////
-////task cucumber(type: JavaExec) {
-////	dependsOn assemble, compileTestJava
-////	systemProperty('envcu', System.properties['envcu'] ?: 'dev')
-////	main = "io.cucumber.core.cli.Main"
-////	classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-////	args = ['--plugin', 'pretty','--plugin','html:CucumberReports','--plugin', 'json:CucumberReports/report.json','--glue', 'CucumberTest', 'src/test/resources']
-////}
-////
-////cucumberReports {
-////	outputDir = file('CucumberReports')
-////	buildId = '0'
-////	reports = files('CucumberReports/report.json')
-////}
-
-String imageName = "jacobwestwellnetcompany/concept:$version"
+String imageName = "sarah-rose-ferris/concept:$version"
 docker {
 	name imageName
 	files "build/libs/${bootJar.archiveFileName.get()}"

@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-11-16T16:33:26.322Z",
+        "start_timestamp": "2021-11-17T10:51:53.739Z",
         "line": 4,
         "name": "Putting one thing in the bag",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 19004000,
+              "duration": 18989000,
               "status": "passed"
             },
             "line": 5,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 4004700,
+              "duration": 4008500,
               "status": "passed"
             },
             "line": 6,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 8998500,
+              "duration": 7993900,
               "status": "passed"
             },
             "line": 7,
