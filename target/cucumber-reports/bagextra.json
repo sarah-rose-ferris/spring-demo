@@ -1,0 +1,65 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-11-17T16:34:39.378Z",
+        "line": 4,
+        "name": "Putting one thing in the bag",
+        "description": "",
+        "id": "bag-more-functionalities;putting-one-thing-in-the-bag",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21002500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the bag is not empty",
+            "match": {
+              "location": "com.concept.concept.bagextra.BagExtraCucumberStepDefinitions.the_bag_is_not_empty()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3998500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I empty the bag",
+            "match": {
+              "location": "com.concept.concept.bagextra.BagExtraCucumberStepDefinitions.empty_the_bag()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8999500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the bag is empty",
+            "match": {
+              "location": "com.concept.concept.bagcommons.BagCommonCucumberStepDefinitions.the_bag_is_empty()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestCaseKey\u003dTS-T12"
+          }
+        ]
+      }
+    ],
+    "name": "Bag more functionalities",
+    "description": "",
+    "id": "bag-more-functionalities",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/bagextra/bag-more.feature",
+    "tags": []
+  }
+]
