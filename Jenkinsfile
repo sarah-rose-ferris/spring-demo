@@ -45,6 +45,6 @@ pipeline {
 //                         jiraProjectVersion: '10001',
 //                         folderId: '3040527',
 //                       ]
-    }
+
   }
 }
