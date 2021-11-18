@@ -36,9 +36,15 @@ pipeline {
       echo 'Post build actions'
       publishTestResults serverAddress: 'https://testdashboardwork.atlassian.net',
         projectKey: 'TS',
-        filePath: '**/target/**/*.json',
+        filePath: 'target/cucumber-reports/*.json',
         format: 'Cucumber',
-        autoCreateTestCases: true
+        autoCreateTestCases: true,
+        customTestCycle: [
+                        name: 'Jenkins Build',
+                        description: 'Results from Jenkins Build',
+                        jiraProjectVersion: '10001',
+                        folderId: '3040527',
+                      ]
     }
   }
 }
