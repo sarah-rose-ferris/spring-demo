@@ -39,12 +39,12 @@ pipeline {
         filePath: 'target/cucumber-reports/*.json',
         format: 'Cucumber',
         autoCreateTestCases: true,
-        customTestCycle: [
-                        name: 'Jenkins Build',
-                        description: 'Results from Jenkins Build',
-                        jiraProjectVersion: '10001',
-                        folderId: '3040527',
-                      ]
+//         customTestCycle: [
+//                         name: 'Jenkins Build',
+//                         description: 'Results from Jenkins Build',
+//                         jiraProjectVersion: '10001',
+//                         folderId: '3040527',
+//                       ]
     }
   }
 }
