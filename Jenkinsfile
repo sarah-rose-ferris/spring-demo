@@ -36,8 +36,8 @@ pipeline {
       echo 'Post build actions'
       publishTestResults serverAddress: 'https://testdashboardwork.atlassian.net',
         projectKey: 'TS',
-        filePath: 'target/cucumber-reports/*.json',
-        format: 'Cucumber',
+        filePath: 'target/*.xml',
+        format: 'Zephyr Scale Output Result for JUnit',
         autoCreateTestCases: true
     }
   }
