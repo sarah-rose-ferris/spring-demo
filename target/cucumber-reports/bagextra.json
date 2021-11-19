@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-11-17T16:34:39.378Z",
+        "start_timestamp": "2021-11-19T11:19:52.390Z",
         "line": 4,
         "name": "Putting one thing in the bag",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 21002500,
+              "duration": 24005400,
               "status": "passed"
             },
             "line": 5,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 3998500,
+              "duration": 4995400,
               "status": "passed"
             },
             "line": 6,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 8999500,
+              "duration": 12005500,
               "status": "passed"
             },
             "line": 7,
@@ -50,7 +50,7 @@
         ],
         "tags": [
           {
-            "name": "@TestCaseKey\u003dTS-T12"
+            "name": "@TestCaseKey\u003dTS-T18"
           }
         ]
       }

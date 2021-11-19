@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-11-17T16:34:38.561Z",
+        "start_timestamp": "2021-11-19T11:19:51.023Z",
         "line": 4,
         "name": "Putting one thing in the bag",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 535025200,
+              "duration": 874320000,
               "status": "passed"
             },
             "line": 5,
@@ -25,15 +25,15 @@
           },
           {
             "result": {
-              "duration": 42987700,
+              "duration": 67203300,
               "status": "passed"
             },
             "line": 6,
-            "name": "I put 1 potato in the bag",
+            "name": "I put 2 potato in the bag",
             "match": {
               "arguments": [
                 {
-                  "val": "1",
+                  "val": "2",
                   "offset": 6
                 },
                 {
@@ -47,8 +47,9 @@
           },
           {
             "result": {
-              "duration": 4994900,
-              "status": "passed"
+              "error_message": "org.opentest4j.AssertionFailedError: \r\nexpected: 1\r\nbut was : 2\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat com.concept.concept.bagbasics.BagCucumberStepDefinitions.assertNumberOfTimes(BagCucumberStepDefinitions.java:46)\r\n\tat com.concept.concept.bagbasics.BagCucumberStepDefinitions.the_bag_should_contain_only_something(BagCucumberStepDefinitions.java:34)\r\n\tat ✽.the bag should contain only 1 potato(file:///C:/Users/safer/concept/spring-demo/src/test/resources/features/bagbasics/bag.feature:7)\r\n",
+              "duration": 21128900,
+              "status": "failed"
             },
             "line": 7,
             "name": "the bag should contain only 1 potato",
@@ -70,12 +71,12 @@
         ],
         "tags": [
           {
-            "name": "@TestCaseKey\u003dTS-T10"
+            "name": "@TestCaseKey\u003dTS-T16"
           }
         ]
       },
       {
-        "start_timestamp": "2021-11-17T16:34:39.256Z",
+        "start_timestamp": "2021-11-19T11:19:52.182Z",
         "line": 10,
         "name": "Putting few things in the bag",
         "description": "",
@@ -85,7 +86,7 @@
         "steps": [
           {
             "result": {
-              "duration": 15999400,
+              "duration": 19202800,
               "status": "passed"
             },
             "line": 11,
@@ -97,7 +98,7 @@
           },
           {
             "result": {
-              "duration": 6997100,
+              "duration": 9008100,
               "status": "passed"
             },
             "line": 12,
@@ -119,7 +120,7 @@
           },
           {
             "result": {
-              "duration": 31001700,
+              "duration": 26002200,
               "status": "passed"
             },
             "line": 13,
@@ -141,7 +142,7 @@
           },
           {
             "result": {
-              "duration": 5001700,
+              "duration": 6999200,
               "status": "passed"
             },
             "line": 14,
@@ -163,7 +164,7 @@
           },
           {
             "result": {
-              "duration": 5999200,
+              "duration": 10990000,
               "status": "passed"
             },
             "line": 15,
@@ -186,7 +187,7 @@
         ],
         "tags": [
           {
-            "name": "@TestCaseKey\u003dTS-T11"
+            "name": "@TestCaseKey\u003dTS-T17"
           }
         ]
       }
