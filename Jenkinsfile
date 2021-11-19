@@ -37,7 +37,7 @@ pipeline {
       publishTestResults serverAddress: 'https://testdashboardwork.atlassian.net',
         projectKey: 'TS',
         filePath: 'target/*.xml',
-        format: 'Cucumber',
+        format: 'Zephyr Scale Output Result for JUnit',
         autoCreateTestCases: true
     }
   }
